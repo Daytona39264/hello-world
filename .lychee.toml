@@ -1,0 +1,23 @@
+# Lychee link checker config.
+# Docs: https://lychee.cli.rs/usage/config/
+
+max_redirects = 5
+max_retries = 2
+retry_wait_time = 2
+timeout = 20
+
+# Treat 429 (rate limited) as success — we'll re-run the cron sweep later.
+accept = ["100..=103", "200..=299", "429"]
+
+# Skip schemes and paths that aren't HTTP URLs to verify from this repo:
+# - vscode://    custom URI scheme for the editor
+# - /copilot/    internal docs.github.com cross-references rendered by Liquid
+# - /assets/     image paths served by the docs site, not this repo
+exclude = [
+  "^vscode://",
+  "^/copilot/",
+  "^/assets/",
+]
+
+# Don't try to resolve anchors against rendered HTML.
+include_fragments = false

@@ -220,7 +220,7 @@ To enable comment suggestions, you need to configure the comment style in {% dat
 1. Under the **Code Style** heading, click **General**.
 1. Under "Comments," select **Xml Doc Comments** from the dropdown.
 1. Select **Insert existing comment style at the start of new lines when writing comments** and **Continue single line comments.** Then click **OK**.
-1. In the **Options** tab, in the left-side panel, click **GitHub**. 
+1. In the **Options** tab, in the left-side panel, click **GitHub**.
 1. Click **Copilot**, then **Editor**.
 1. Select **Enable AI generated descriptions for auto-inserted documentation comments in supported languages**.
 
@@ -230,7 +230,7 @@ To enable comment suggestions, you need to configure the comment style in {% dat
 1. In the left-side panel, click **Languages**.
 1. Click **C#**, then **More Settings**, then **Advanced**.
 1. Under "Comments," select **Generate XML documentation comments for ///**, **Insert // at the start of new lines when writing // comments**, and **Insert \* at the start of new lines when writing /\* \*/ comments.** Then click **OK**.
-1. In the **Options** tab, in the left-side panel, click **GitHub**. 
+1. In the **Options** tab, in the left-side panel, click **GitHub**.
 1. Click **Copilot**, then **Editor**.
 1. Select **Enable AI generated descriptions for auto-inserted documentation comments in supported languages**.
 
