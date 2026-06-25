@@ -26,7 +26,16 @@ These are not plain Markdown. They are Liquid-templated and rely on conventions 
 - **Frontmatter** — required keys include `title`, `intro`, `versions`, `contentType`, `category`. Don't drop or rename keys without reason. `defaultTool` selects which tool-conditional section renders first.
 - **Variables** — write product/feature names as `{% data variables.product.prodname_copilot %}`, not as literal strings. Reuse the variable names already present in the file rather than inventing new ones.
 - **Reusables** — `{% data reusables.copilot.accept-suggestion %}` pulls in shared snippets. Don't expand them inline.
-- **Tool-conditional blocks** — `{% vscode %} … {% endvscode %}`, `{% jetbrains %} … {% endjetbrains %}`, `{% visualstudio %}`, `{% vimneovim %}`, `{% azure_data_studio %}`, `{% xcode %}`, `{% eclipse %}`. When adding instructions for a tool, put them inside the matching block; mirror the structure (Introduction → Prerequisites → Getting code suggestions → …) used by the other tools in the same file.
+- **Tool-conditional blocks** — paired open/close Liquid tags. Always include the matching closer:
+  - `{% vscode %} … {% endvscode %}`
+  - `{% jetbrains %} … {% endjetbrains %}`
+  - `{% visualstudio %} … {% endvisualstudio %}`
+  - `{% vimneovim %} … {% endvimneovim %}`
+  - `{% azure_data_studio %} … {% endazure_data_studio %}`
+  - `{% xcode %} … {% endxcode %}`
+  - `{% eclipse %} … {% endeclipse %}`
+
+  When adding instructions for a tool, put them inside the matching block; mirror the structure (Introduction → Prerequisites → Getting code suggestions → …) used by the other tools in the same file.
 - **Cross-links** — internal links use `[AUTOTITLE](/path/to/article)`; the title is resolved by the docs build. Don't hand-write the title.
 - **Code fences** — keep the `copy` modifier (e.g. ```` ```javascript copy ````) on snippets meant to be copied.
 - **Keyboard shortcuts** — use `<kbd>` tags and the existing macOS / Windows-or-Linux table format.
